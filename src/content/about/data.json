@@ -1,0 +1,13 @@
+{
+    "title":"Freelance Frontend Dev.",
+    "author":"Agustin Musumeci",
+    "experience":"I am currently freelance. Since 2023 i have been participating in a few projects as web developer in work with a grapic designer.",
+    "picture": "mi foto",
+    "refs":[
+            {"title":"CV", "href": "https://mail.google.com/"},
+            {"title":"Github", "href": "https://github.com/agustinmusumeci", "icon":"devicon-github-original"},
+            {"title":"Linkedin", "href": "https://www.linkedin.com/in/agustinmusumeci/", "icon":"devicon-linkedin-plain"},
+            {"title":"Email", "href": "https://mail.google.com/", "content":"agu.musumeci@gmail.com", "icon":""},
+            {"title":"Phone", "content":"+54 351 2162 461"}
+        ]
+}

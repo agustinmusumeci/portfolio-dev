@@ -1,0 +1,23 @@
+[
+    {
+        "title":"Valdemarin Studio",
+        "category":"Landing Page",
+        "img":"https://picsum.photos/400",
+        "tools":["HTML5","SASS","JavaScript"],
+        "summary":"Valdemarin Studio landing page developed in cooperation with a graphic designer and a Backend Developer back on 2023 in less than 2 weeks."
+    },
+    {
+        "title":"Grupo Keluar",
+        "category":"Landing Page",
+        "img":"https://picsum.photos/400",
+        "tools":["HTML5","CSS","Tailwind CSS","Astro","JavaScript"],
+        "summary":"Grupo Keluar landing page developed in cooperation with a graphic designer and a Backend Developer back on 2023 in less than 3 weeks."
+    },
+    {
+        "title":"Aside From Style",
+        "category":"Ecommerce",
+        "img":"https://picsum.photos/400",
+        "tools":["HTML","CSS","Tailwind CSS", "React", "JavaScript", "MongoDB", "NodeJS"],
+        "summary":"Clothing Ecommerce developed on my own as a portfolio project and for practice."
+    }
+]

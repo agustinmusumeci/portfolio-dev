@@ -1,0 +1,26 @@
+---
+import { getEntry } from "astro:content";
+import Navigation from "../components/Navigation.astro";
+
+const about = await getEntry("about","data");
+---
+<footer class="bg-beige text-ellipsis overflow-hidden">
+    <div class="container flex flex-wrap flex-col gap-6 sm:gap-0 sm:flex-row justify-between">
+        <h1 class="space-down-md font-logo"><a href="#top">{about.data.author}</a></h1>
+        <div class="flex flex-row flex-1 justify-start sm:justify-end gap-20">
+            <aside>
+                <p class="font-logo">Navigation</p>
+                <Navigation styles="flex-col !gap-1"/>
+            </aside>
+            <aside>
+                <p class="font-logo">Media</p>
+                <Navigation styles="flex-col !gap-1">
+                    {about.data.refs.map((el) => (
+                        (el.title == "Github" || el.title == "Linkedin" || el.title == "Email") &&
+                        <li class="text-hover"><a href={el.href} target="_blank">{el.content ? el.content : el.title}</a></li>
+                    ))}
+                </Navigation>
+            </aside>
+        </div>
+    </div>
+</footer>

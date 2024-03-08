@@ -1,0 +1,51 @@
+---
+import { getEntry } from "astro:content";
+import Card from "../components/Card.astro";
+import Image from "../components/Image.astro";
+
+const about = await getEntry("about","data");
+const skills = await getEntry("skills","data");
+
+---
+<section class="container space-down-xl" id="about-me">
+    <article>
+        <h2 class="title-lg">
+            About me .
+        </h2>
+        <article class="flex flex-wrap items-center gap-5">
+            <Image url="/images/pics/profile.png" alt="Profile Picture" style="w-[30%] md:w-[20%] rounded-full shadow-2xl"/>
+            <p>
+                Hi! I am {about.data.author}
+            </p>
+        </article>
+    </article>
+
+    <article class="space-y-xl">
+        <h3 class="title-md">
+            Experiencie
+        </h3>
+        <p>
+            {about.data.experience}
+        </p>
+    </article>
+    
+    <article class="space-down-xl">
+        <h3  class="title-md">
+            Skills
+        </h3>
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {skills.data.map((el) => (
+            <Card>
+                <h4 class="title-sm" slot="title">
+                    {el.title}
+                </h4>
+                <ul class="flex flex-wrap justify-start gap-8 space-up-md" slot="content">
+                    {el.content.map((ele) => (
+                        <li class="flex flex-col text-center font-medium"><i class={`${ele.icon} text-6xl`}></i>{ele.title}</li>
+                    ))}
+                </ul>
+            </Card>
+        ))}
+        </section>
+    </article>
+</section>

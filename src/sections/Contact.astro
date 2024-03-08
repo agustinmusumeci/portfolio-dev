@@ -1,0 +1,40 @@
+---
+import { getEntry } from "astro:content";
+
+const about = await getEntry("about","data");
+---
+<section class="container space-down-xl" id="get-in-touch">
+    <h2 class="title-lg">Get in touch .</h2>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <aside>
+            <p class="title-sm space-down-md">
+                Looking for a web developer? Get in touch to learn more.
+            </p>
+            <ul class="flex flex-wrap gap-4 xs:gap-6">
+                {about.data.refs.map((el) => (
+                    (el.title == "Email" || el.title == "Phone") &&
+                    <li class="button"><a href={el.href} rel="">{el.content}</a></li>
+                ))}
+            </ul>
+        </aside>
+
+        <form action="" class="w-[85%] md:w-[50%] flex flex-col gap-6 col-span-2" id="contact-form" data-astro-reload>
+                <label for="name">
+                    <p class="font-display uppercase font-bold">Name</p>
+                    <input type="text" name="name" id="name" class="w-full rounded-lg px-3 py-1" required="true">
+                </label>
+                <label for="email">
+                    <p class="font-display uppercase font-bold">Email</p>
+                    <input type="email" name="email" id="email" class="w-full rounded-lg px-3 py-1" required="true">
+                </label>
+                <label for="message">
+                    <p class="font-display uppercase font-bold">Message</p>
+                    <textarea name="message" id="message" class="w-full rounded-lg" required="true">
+                    </textarea>
+                </label>
+                <button type="submit" class="button font-display uppercase font-bold w-40">Send</button>
+        </form>
+    </section>
+</section>
+
+<script src="../scripts/handleEmailSend.js"></script>

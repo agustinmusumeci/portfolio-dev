@@ -1,0 +1,14 @@
+---
+import Chip from "../components/Chip.astro";
+
+interface Props {
+    chips: string;
+}
+
+const {chips} = Astro.props;
+---
+<ul class="chips">
+    {chips.map((el) => (
+        <Chip content={el}/>
+    ))}
+</ul>

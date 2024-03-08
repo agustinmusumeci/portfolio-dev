@@ -1,0 +1,200 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+	html {
+		@apply text-night/90 font-text selection:bg-pink scroll-smooth;
+	}
+
+	#background {
+		@apply sticky -top-[20%] md:-top-[100%] blur-3xl -z-10 overflow-x-clip;
+		/* @apply sticky md:fixed -top-[20%] md:-top-[50%] blur-3xl -z-10 overflow-x-clip md:overflow-visible; */
+	}
+
+	#background > * {
+		@apply absolute animate-spin-slow mix-blend-saturation;
+		width: max(100dvw, 800px);
+	}
+
+	/* STUFF */
+	.container {
+		@apply m-auto py-5;
+		max-width: min(1290px, calc(90% - 5dvw));
+	}
+
+	.card {
+		@apply p-6 bg-darkbeige border-dark border-4 rounded-lg drop-shadow-xl inset-shadow-xl;
+	}
+
+	.hamburger {
+		@apply w-6 h-5 p-1 flex flex-col justify-between items-center z-50 md:hidden md:opacity-0;
+
+	}
+
+	.hamburger span {
+		@apply w-full h-[2px] bg-night/90 shadow-xl rounded-full animate;
+	}
+
+	.hamburger[data-active="true"] span:nth-child(1) {
+		@apply translate-y-[4.6px] -rotate-45;
+	}
+
+	.hamburger[data-active="true"] span:nth-child(2) {
+		@apply translate-x-[50%] translate-y-[50%] opacity-0;
+	}
+
+	.hamburger[data-active="true"] span:nth-child(3) {
+		@apply -translate-y-[7.15px] rotate-45;
+	}
+
+	.button{
+		@apply px-3 py-1 mb-3 mr-2 border-[1px] border-dark rounded-full bg-pink/20 inset-shadow-md button-hover;
+	}
+	
+	.chips {
+		@apply flex flex-wrap space-up-md;
+	}
+
+	.chip {
+		@apply px-3 py-1 mb-3 mr-2 border-[1px] border-dark rounded-full bg-pink/20 inset-shadow-md;
+	}
+
+	input, textarea {
+		@apply border-[1px] border-black inset-shadow-sm;
+	}
+
+	.inset-shadow-xl {
+		@apply shadow-[inset_0px_-6px_0px_0px_#28262f]
+	}
+
+	.inset-shadow-lg {
+		@apply shadow-[inset_0px_-4px_0px_0px_#28262f]
+	}
+
+	.inset-shadow-md {
+		@apply shadow-[inset_0px_-3px_0px_0px_#28262f];
+	}
+
+	.inset-shadow-sm {
+		@apply shadow-[inset_0px_-2px_0px_0px_#28262f];
+	}
+
+	/* FONTS */
+	.font-display {
+		font-family: "Montserrat", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	
+	.font-text {
+		@apply text-base;
+		font-family: "Source Sans 3", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	.font-logo {
+		@apply font-semibold uppercase;
+	}
+
+	.title-xl {
+		@apply space-down-md font-display text-7xl xs:text-8xl leading-none font-bold uppercase;
+	}
+
+	.title-lg {
+		@apply space-down-md font-display text-4xl xs:text-6xl leading-none font-bold uppercase;
+	}
+
+	.title-md {
+		@apply space-y-lg font-display text-3xl xs:text-4xl leading-none font-bold uppercase;
+	}
+
+	.title-sm {
+		@apply space-down-lg font-display text-lg xs:text-xl leading-none font-bold uppercase;
+	}
+
+	/* SPACING */
+	.space-up-md {
+		@apply mt-5;
+	}
+
+	.space-down-md {
+		@apply mb-5;
+	}
+
+	.space-y-md {
+		@apply my-5;
+	}
+
+	.space-up-lg {
+		@apply mt-6;
+	}
+
+	.space-down-lg {
+		@apply mb-6;
+	}
+
+	.space-y-lg {
+		@apply my-6;
+	}
+
+	.space-up-xl {
+		@apply mt-8;
+	}
+
+	.space-down-xl {
+		@apply mb-8;
+	}
+
+	.space-y-xl {
+		@apply my-8;
+	}
+
+	/* ANIMATIONS */
+	.animate {
+		@apply transition-all;
+	}
+
+	.scale {
+		@apply hover:scale-125;
+	}
+
+	.text-hover {
+		@apply animate hover:text-gray;
+	}
+
+	.icon-hover {
+		@apply animate scale hover:text-darkgray ;
+	}
+
+	.button-hover {
+		@apply hover:bg-pink animate scale;
+	}
+
+</style>
+

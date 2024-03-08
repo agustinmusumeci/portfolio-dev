@@ -1,0 +1,22 @@
+---
+interface Props {
+    styles: string;
+}
+
+const {styles} = Astro.props;
+---
+<nav>
+    <ul class=`flex gap-5 ${styles}`>
+        <slot>
+            <li class="">
+                <a href="#about-me" class="text-hover">About me</a>
+            </li> 
+            <li>
+                <a href="#projects" class="text-hover">Projects</a>
+            </li>
+            <li>
+                <a href="#get-in-touch" class="text-hover">Get in touch</a>
+            </li>
+        </slot>
+    </ul>
+</nav>
