@@ -5,7 +5,14 @@ const aboutCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         author: z.string(),
-        experience: z.string(),
+        about: z.string(),
+        experience: z.array(
+            z.object({
+                year: z.string(),
+                content: z.string(),
+                last: z.boolean().optional(),
+            })
+        ),
         picture: z.string(),
         refs: z.array(
             z.object({
@@ -24,9 +31,10 @@ const projectsCollection = defineCollection({
         z.object({
             title: z.string(),
             category: z.string(),
-            img: z.string().url(),
+            img: z.string(),
             tools: z.array(z.string()),
             summary: z.string(),
+            href: z.string().url()
         })
     )
 })

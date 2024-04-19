@@ -6,6 +6,7 @@
 // Font size clamp
 // https://utopia.fyi/clamp/calculator?a=350,1920,11.2—14|12.8—16|14.4—18|16—20|17.6—22|19.2—24|24—30|28.8—36|38.4—48|48—60|57.6—72|76.8—96|102.4—128
 
+// './node_modules/flowbite/**/*.js'
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -85,5 +86,6 @@ export default {
 			"8xl": "clamp(3.6rem, 2.6191rem + 4.4841vi, 8rem);",
 		},
 	},
-	plugins: [],
+	plugins: [
+	],
 }

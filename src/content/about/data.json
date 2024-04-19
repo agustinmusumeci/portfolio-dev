@@ -1,8 +1,14 @@
 {
     "title":"Freelance Frontend Dev.",
     "author":"Agustin Musumeci",
-    "experience":"I am currently freelance. Since 2023 i have been participating in a few projects as web developer in work with a grapic designer.",
-    "picture": "mi foto",
+    "about":"+ 1 years experience developer within the sector as a freelance and a second year system information engineering student whose goals are successfulness, know how to adapt and keep learning. Currently I am available for job and new experiences.",
+    "experience": [
+        {"year": "December 2022", "content": "I jumped into university (Universidad Tecnológica Nacional) and started learning Fullstack Development."},
+        {"year": "August 2023", "content": "Started working as a Freelance developing landing pages, along with a graphic designer in a few projects learning how to team-work and cooperate."},
+        {"year": "Junary 2024", "content": "Started my own projects and get deep into more back&front tecnologies."},
+        {"year": "Currently 2024", "content": "I am working as a Freelance and started looking for oportunities outside, developing software for interested customers and companies.","last":true}
+    ],
+    "picture": "My picture",
     "refs":[
             {"title":"CV", "href": "https://mail.google.com/"},
             {"title":"Github", "href": "https://github.com/agustinmusumeci", "icon":"devicon-github-original"},

@@ -7,16 +7,24 @@ const handleEmailSend = async (e) => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-
+    
     const DATA = {
         name: name,
         email: email,
         message: message
     }
+    
+    const response = await POSTDATA("https://yotoro.net/mailer/send", DATA);
+    
+    const modal = document.getElementById("modal");
 
-    const response = await POSTDATA("https://mailing-api-fs24.onrender.com/mailer/send-email", DATA);
-    console.log(response)
-}
+    // Set modal message for form feedback
+    modal.innerHTML += response.data.message;
+
+
+    modal.setAttribute("data-active", true);
+
+};
 
 const POSTDATA = async(URL, DATA) => {
     try {

@@ -2,16 +2,39 @@
 import { getEntry } from "astro:content";
 import Navigation from "../components/Navigation.astro";
 
-const about = await getEntry("about","data");
+const about = await getEntry("about", "data");
 ---
+
 <section class="container h-[92.5dvh] grid place-content-center">
-    <h1 class="title-xl">
-        {about.data.title}
-    </h1>
-    <Navigation>
-        {about.data.refs.map((el) => (
-            (el.title != "Phone" && el.title != "Email") && 
-            <li class="icon-hover"><a href={el.href} target="_blank" class="text-2xl"><i class={el.icon}></i></a></li>
-        ))}
-    </Navigation>
+    <div aria-hidden="true" data-animate="fade-bottom">
+        <h1 class="title-xl">
+            {about.data.title}
+        </h1>
+        <Navigation styles="items-">
+            {
+                about.data.refs.map(
+                    (el) =>
+                        el.title != "Phone" &&
+                        el.title != "Email" && (
+                            <li class="icon-hover">
+                                <a
+                                    href={el.href}
+                                    target="_blank"
+                                    class="text-2xl flex items-center"
+                                >
+                                    <i class={el.icon} />
+                                </a>
+                            </li>
+                        ),
+                )
+            }
+            <li
+                class="bg-dark text-darkwhite text-xs px-4 h-7 text-center flex items-center rounded-lg icon-hover hover:bg-darkgray hover:!text-darkwhite"
+            >
+                <a href="/public/files/CV_AgustinMusumeci_2024.pdf" download="CV_AgustinMusumeci_2024.pdf"
+                    >Download CV</a
+                >
+            </li>
+        </Navigation>
+    </div>
 </section>

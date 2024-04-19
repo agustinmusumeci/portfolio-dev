@@ -15,17 +15,31 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../node_modules/cutest-animations/src/animations.css"
+		/>
 	</head>
 	<body>
 		<div id="top"></div>
 		<slot />
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script>
+		<script src="../../node_modules/cutest-animations/src/index.js"
+		></script>
 	</body>
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+	@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 	html {
 		@apply text-night/90 font-text selection:bg-pink scroll-smooth;
@@ -41,19 +55,60 @@ const { title } = Astro.props;
 		width: max(100dvw, 800px);
 	}
 
-	/* STUFF */
 	.container {
 		@apply m-auto py-5;
-		max-width: min(1290px, calc(90% - 5dvw));
+		max-width: min(1290px, calc(90% - 10dvw));
 	}
 
 	.card {
-		@apply p-6 bg-darkbeige border-dark border-4 rounded-lg drop-shadow-xl inset-shadow-xl;
+		@apply h-[100%] md:w-[100%] w-[80%] p-6 bg-darkbeige border-dark border-2 md:border-4 rounded-lg drop-shadow-xl inset-shadow-xl hover:scale-105 animate hover:bg-pink/50;
+	}
+
+	@keyframes modal {
+		0% {
+			opacity: 100%;
+		}
+		90% {
+			opacity: 95%;
+		}
+		95% {
+			opacity: 90%;
+		}
+		100% {
+			opacity: 0%;
+		}
+	}
+
+	.modal {
+		@apply opacity-0 fixed bottom-[5%] left-[10%] right-[10.5%] lg:left-[38%] lg:right-[38.5%] w-fit m-auto inset-shadow-sm border-[1px] border-dark rounded-lg px-6 pb-6 pt-3 bg-darkbeige z-50 animate;
+	}
+
+	.modal[data-active="true"] {
+		animation-name: modal;
+		animation-duration: 6.15s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes loader {
+		from {
+			width: 95%;
+		}
+		to {
+			width: 0%;
+		}
+	}
+
+	.loader {
+		@apply absolute bottom-[10px] left-6 w-[85%] h-[1px] border-[3px] border-white rounded-full;
+	}
+
+	.modal[data-active="true"] .loader {
+		animation-name: loader;
+		animation-duration: 7s;
 	}
 
 	.hamburger {
 		@apply w-6 h-5 p-1 flex flex-col justify-between items-center z-50 md:hidden md:opacity-0;
-
 	}
 
 	.hamburger span {
@@ -72,28 +127,29 @@ const { title } = Astro.props;
 		@apply -translate-y-[7.15px] rotate-45;
 	}
 
-	.button{
+	.button {
 		@apply px-3 py-1 mb-3 mr-2 border-[1px] border-dark rounded-full bg-pink/20 inset-shadow-md button-hover;
 	}
-	
+
 	.chips {
-		@apply flex flex-wrap space-up-md;
+		@apply flex flex-wrap;
 	}
 
 	.chip {
-		@apply px-3 py-1 mb-3 mr-2 border-[1px] border-dark rounded-full bg-pink/20 inset-shadow-md;
+		@apply px-3 py-1 mb-3 mr-2 border-[1px] border-dark rounded-lg bg-pink/20 inset-shadow-md hover:bg-pink animate;
 	}
 
-	input, textarea {
+	input,
+	textarea {
 		@apply border-[1px] border-black inset-shadow-sm;
 	}
 
 	.inset-shadow-xl {
-		@apply shadow-[inset_0px_-6px_0px_0px_#28262f]
+		@apply shadow-[inset_0px_-6px_0px_0px_#28262f];
 	}
 
 	.inset-shadow-lg {
-		@apply shadow-[inset_0px_-4px_0px_0px_#28262f]
+		@apply shadow-[inset_0px_-4px_0px_0px_#28262f];
 	}
 
 	.inset-shadow-md {
@@ -104,13 +160,12 @@ const { title } = Astro.props;
 		@apply shadow-[inset_0px_-2px_0px_0px_#28262f];
 	}
 
-	/* FONTS */
 	.font-display {
 		font-family: "Montserrat", sans-serif;
 		font-optical-sizing: auto;
 		font-style: normal;
 	}
-	
+
 	.font-text {
 		@apply text-base;
 		font-family: "Source Sans 3", sans-serif;
@@ -135,10 +190,9 @@ const { title } = Astro.props;
 	}
 
 	.title-sm {
-		@apply space-down-lg font-display text-lg xs:text-xl leading-none font-bold uppercase;
+		@apply space-down-md font-display text-lg xs:text-xl leading-none font-bold uppercase;
 	}
 
-	/* SPACING */
 	.space-up-md {
 		@apply mt-5;
 	}
@@ -175,7 +229,6 @@ const { title } = Astro.props;
 		@apply my-8;
 	}
 
-	/* ANIMATIONS */
 	.animate {
 		@apply transition-all;
 	}
@@ -189,12 +242,10 @@ const { title } = Astro.props;
 	}
 
 	.icon-hover {
-		@apply animate scale hover:text-darkgray ;
+		@apply animate scale hover:text-darkgray;
 	}
 
 	.button-hover {
-		@apply hover:bg-pink animate scale;
+		@apply hover:bg-pink animate;
 	}
-
 </style>
-

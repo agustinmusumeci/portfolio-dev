@@ -1,6 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import Navigation from "../components/Navigation.astro";
+import Hamburger from "../components/Hamburger.astro";
 
 const about = await getEntry("about","data");
 ---
@@ -8,15 +9,11 @@ const about = await getEntry("about","data");
     <h1 class="font-logo z-50">
         <a href="#top">{about.data.author}</a>
     </h1>
-    <div class="w-full h-[200px] px-[7.5%] py-9 absolute left-0 top-0 flex bg-darkwhite -translate-y-full md:w-fit md:h-fit md:px-0 md:py-0 md:relative md:bg-opacity-0 md:-translate-y-0 animate" aria-hidden="true" id="nav">
+    <div class="w-full h-[200px] px-[9.5%] py-9 absolute left-0 top-0 flex bg-darkwhite -translate-y-full md:w-fit md:h-fit md:px-0 md:py-0 md:relative md:bg-opacity-0 md:-translate-y-0 animate" aria-hidden="true" id="nav">
         <Navigation styles="items-stat md:items-center flex-col md:flex-row" />
     </div>
 
-    <button class="hamburger" id="hamburger" data-active="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </button>
+    <Hamburger />
 </header>
 
 <script src="../scripts/handleNav.js">

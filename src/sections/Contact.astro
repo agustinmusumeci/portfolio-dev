@@ -1,12 +1,14 @@
 ---
 import { getEntry } from "astro:content";
+import Modal from "../components/Modal.astro";
 
 const about = await getEntry("about","data");
 ---
+<Modal />
 <section class="container space-down-xl" id="get-in-touch">
-    <h2 class="title-lg">Get in touch .</h2>
+    <h2 class="title-lg" data-animate="fade-bottom">Get in touch .</h2>
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <aside>
+        <aside data-animate="fade-bottom">
             <p class="title-sm space-down-md">
                 Looking for a web developer? Get in touch to learn more.
             </p>
@@ -19,22 +21,22 @@ const about = await getEntry("about","data");
         </aside>
 
         <form action="" class="w-[85%] md:w-[50%] flex flex-col gap-6 col-span-2" id="contact-form" data-astro-reload>
-                <label for="name">
+                <label for="name" data-animate="fade-bottom" data-animate-delay="150">
                     <p class="font-display uppercase font-bold">Name</p>
                     <input type="text" name="name" id="name" class="w-full rounded-lg px-3 py-1" required="true">
                 </label>
-                <label for="email">
+                <label for="email" data-animate="fade-bottom" data-animate-delay="300">
                     <p class="font-display uppercase font-bold">Email</p>
                     <input type="email" name="email" id="email" class="w-full rounded-lg px-3 py-1" required="true">
                 </label>
-                <label for="message">
+                <label for="message" data-animate="fade-bottom" data-animate-delay="450">
                     <p class="font-display uppercase font-bold">Message</p>
-                    <textarea name="message" id="message" class="w-full rounded-lg" required="true">
-                    </textarea>
+                    <textarea name="message" id="message" class="h-28 px-3 py-1 resize-none w-full rounded-lg" required="true"></textarea>
                 </label>
-                <button type="submit" class="button font-display uppercase font-bold w-40">Send</button>
+                <button type="submit" class="button hover:scale font-display uppercase font-bold w-40" data-animate="fade-bottom" data-animate-delay="550">Send</button>
         </form>
     </section>
 </section>
+
 
 <script src="../scripts/handleEmailSend.js"></script>

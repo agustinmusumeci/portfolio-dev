@@ -7,20 +7,22 @@ import Chips from "../components/Chips.astro";
 const projects = await getEntry("projects","data");
 ---
 <section class="container space-down-xl" id="projects">
-    <h2 class="title-lg">My projects .</h2>
-    <section class="grid gap-6 grid-cols-1 md:grid-cols-3">
-        {projects.data.map((el) => (
-            <Card>
-                <Image url={el.img} alt={`${el.title} Showcase Image.`} style="rounded-lg" slot="image" />
-                <h4 class="mt-6 title-sm" slot="title">
-                    {el.title} {el.category}
-                </h4>
-                <Chips chips={el.tools} slot="content"/>
-                
-                <p class="space-up-md" slot="content">
-                    {el.summary}
-                </p>
-            </Card>
+    <h2 class="title-lg" data-animate="fade-bottom">My projects .</h2>
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.data.map((el, index) => (
+            <a href={el.href} target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay=`${100+(index*50)}`>
+                <Card>
+                    <Image url={el.img} alt={`${el.title} Showcase Image.`} style="rounded-lg w-[75%] h-44 object-cover" slot="image" />
+                    <h4 class="mt-4 title-sm" slot="title">
+                        {el.title} {el.category}
+                    </h4>
+                    <Chips chips={el.tools} slot="content"/>
+                    
+                    <p class="mt-4 " slot="content">
+                        {el.summary}
+                    </p>
+                </Card>
+            </a>
         ))}
     </section>
 </section>
