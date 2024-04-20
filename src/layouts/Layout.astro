@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="" />
+		<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link
@@ -22,17 +22,13 @@ const { title } = Astro.props;
 		/>
 		<link
 			rel="stylesheet"
-			href="../../node_modules/cutest-animations/src/animations.css"
+			href="../node_modules/cutest-animations/src/animations.css"
 		/>
 	</head>
 	<body>
 		<div id="top"></div>
 		<slot />
-		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-		></script>
-		<script src="../../node_modules/cutest-animations/src/index.js"
+		<script src="../node_modules/cutest-animations/src/index.js" is:inline
 		></script>
 	</body>
 </html>
@@ -64,15 +60,14 @@ const { title } = Astro.props;
 		@apply h-[100%] md:w-[100%] w-[80%] p-6 bg-darkbeige border-dark border-2 md:border-4 rounded-lg drop-shadow-xl inset-shadow-xl hover:scale-105 animate hover:bg-pink/50;
 	}
 
-	@keyframes modal {
+	@keyframes modal-fade-out {
 		0% {
 			opacity: 100%;
 		}
-		90% {
-			opacity: 95%;
+		5% {
 		}
-		95% {
-			opacity: 90%;
+		95.5% {
+			opacity: 100%;
 		}
 		100% {
 			opacity: 0%;
@@ -80,31 +75,13 @@ const { title } = Astro.props;
 	}
 
 	.modal {
-		@apply opacity-0 fixed bottom-[5%] left-[10%] right-[10.5%] lg:left-[38%] lg:right-[38.5%] w-fit m-auto inset-shadow-sm border-[1px] border-dark rounded-lg px-6 pb-6 pt-3 bg-darkbeige z-50 animate;
+		@apply fixed top-[5%] left-[10%] right-[10.5%] lg:left-[38%] lg:right-[38.5%] w-fit m-auto inset-shadow-sm border-[1px] border-dark rounded-lg px-6 pb-3 pt-3 bg-white z-50 animate;
 	}
 
 	.modal[data-active="true"] {
-		animation-name: modal;
+		animation-name: modal-fade-out;
 		animation-duration: 6.15s;
 		animation-fill-mode: forwards;
-	}
-
-	@keyframes loader {
-		from {
-			width: 95%;
-		}
-		to {
-			width: 0%;
-		}
-	}
-
-	.loader {
-		@apply absolute bottom-[10px] left-6 w-[85%] h-[1px] border-[3px] border-white rounded-full;
-	}
-
-	.modal[data-active="true"] .loader {
-		animation-name: loader;
-		animation-duration: 7s;
 	}
 
 	.hamburger {

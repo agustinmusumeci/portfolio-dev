@@ -1,5 +1,6 @@
 ---
 import { getEntry } from "astro:content";
+import type { ref } from "../types/ref";
 import Navigation from "../components/Navigation.astro";
 
 const about = await getEntry("about","data");
@@ -15,9 +16,9 @@ const about = await getEntry("about","data");
             <aside>
                 <p class="font-logo">Media</p>
                 <Navigation styles="flex-col !gap-1">
-                    {about.data.refs.map((el) => (
-                        (el.title == "Github" || el.title == "Linkedin" || el.title == "Email") &&
-                        <li class="text-hover"><a href={el.href} target="_blank">{el.content ? el.content : el.title}</a></li>
+                    {about.data.refs.map((ref: ref) => (
+                        (ref.title == "Github" || ref.title == "Linkedin" || ref.title == "Email") &&
+                        <li class="text-hover"><a href={ref.href} target="_blank">{ref.content ? ref.content : ref.title}</a></li>
                     ))}
                 </Navigation>
             </aside>

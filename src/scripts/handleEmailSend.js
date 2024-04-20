@@ -7,23 +7,21 @@ const handleEmailSend = async (e) => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-    
+    const modal = document.getElementById("modal");
+    modal.classList.remove("opacity-0");
+
     const DATA = {
         name: name,
         email: email,
         message: message
-    }
+    };
     
     const response = await POSTDATA("https://yotoro.net/mailer/send", DATA);
     
-    const modal = document.getElementById("modal");
-
     // Set modal message for form feedback
-    modal.innerHTML += response.data.message;
-
+    modal.innerHTML = response.data.message;
 
     modal.setAttribute("data-active", true);
-
 };
 
 const POSTDATA = async(URL, DATA) => {
@@ -32,7 +30,8 @@ const POSTDATA = async(URL, DATA) => {
 
         const data = await response.json();
 
-        return data;
+        return data
+
     } catch(error) {
         console.error(error);
     };

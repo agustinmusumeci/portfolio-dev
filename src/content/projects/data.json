@@ -2,7 +2,7 @@
     {
         "title":"Valdemarin Studio",
         "category":"Landing Page",
-        "img":"/images/pics/valdemarin.PNG",
+        "img":"/images/valdemarin.PNG",
         "tools":["HTML5","SASS","JavaScript"],
         "summary":"Valdemarin Studio landing page developed in cooperation with a graphic designer and a backend developer on 2023.",
         "href":"https://estudiovaldemarin.com/"
@@ -10,7 +10,7 @@
     {
         "title":"Grupo Keluar",
         "category":"Landing Page",
-        "img":"/images/pics/keluar.PNG",
+        "img":"/images/keluar.PNG",
         "tools":["Astro", "Tailwind CSS","JavaScript"],
         "summary":"Grupo Keluar landing page developed in cooperation with a graphic designer/backend dev on 2023.",
         "href": "https://github.com/agustinmusumeci/grupo-keluar-landingpage"
@@ -18,7 +18,7 @@
     {
         "title":"Aside From Style",
         "category":"Ecommerce",
-        "img":"/images/pics/asidefromstyle.PNG",
+        "img":"/images/asidefromstyle.PNG",
         "tools":["HTML","Tailwind CSS", "React", "JavaScript", "MongoDB", "NodeJS"],
         "summary":"Clothing Ecommerce with product display and admin management developed on my own as a portfolio project.",
         "href": "https://github.com/agustinmusumeci/aside-from-style-ecommerce"
@@ -26,7 +26,7 @@
     {
         "title":"Cutest Animations",
         "category":"npm library",
-        "img": "/images/pics/npmlib.PNG",
+        "img": "/images/npmlib.PNG",
         "tools":["JavaScript","CSS","Git","NPM"],
         "summary":"Public on scroll animation library developed and publish on npm with +400 downloads.",
         "href": "https://www.npmjs.com/package/cutest-animations"

@@ -1,22 +1,15 @@
 const handleIntersect = (entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio === 1) {
-            // handleAnimation();
             Array.from(circles).forEach((circle) => {
                 circle.classList.add("");
             });
-        } else {
-            // handleAnimation();
-            Array.from(circles).forEach((circle) => {
-                // circle.classList.remove("");
-            });
-        };
+        }
     });
 };
 
 const handleAnimation = () => {
     Array.from(circles).forEach((circle) => {
-        console.log(circle)
         setTimeout( () => {circle.classList.toggle("bg-pink")}, 1000);
     });
 };

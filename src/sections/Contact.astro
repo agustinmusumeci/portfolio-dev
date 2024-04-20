@@ -1,5 +1,6 @@
 ---
 import { getEntry } from "astro:content";
+import type { ref } from "../types/ref";
 import Modal from "../components/Modal.astro";
 
 const about = await getEntry("about","data");
@@ -13,7 +14,7 @@ const about = await getEntry("about","data");
                 Looking for a web developer? Get in touch to learn more.
             </p>
             <ul class="flex flex-wrap gap-4 xs:gap-6">
-                {about.data.refs.map((el) => (
+                {about.data.refs.map((el:ref) => (
                     (el.title == "Email" || el.title == "Phone") &&
                     <li class="button"><a href={el.href} rel="">{el.content}</a></li>
                 ))}

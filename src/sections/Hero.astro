@@ -1,5 +1,6 @@
 ---
 import { getEntry } from "astro:content";
+import type { ref } from "../types/ref"
 import Navigation from "../components/Navigation.astro";
 
 const about = await getEntry("about", "data");
@@ -13,16 +14,16 @@ const about = await getEntry("about", "data");
         <Navigation styles="items-">
             {
                 about.data.refs.map(
-                    (el) =>
-                        el.title != "Phone" &&
-                        el.title != "Email" && (
+                    (ref: ref) =>
+                        ref.title != "Phone" &&
+                        ref.title != "Email" && (
                             <li class="icon-hover">
                                 <a
-                                    href={el.href}
+                                    href={ref.href}
                                     target="_blank"
                                     class="text-2xl flex items-center"
                                 >
-                                    <i class={el.icon} />
+                                    <i class={ref.icon} />
                                 </a>
                             </li>
                         ),
@@ -31,8 +32,9 @@ const about = await getEntry("about", "data");
             <li
                 class="bg-dark text-darkwhite text-xs px-4 h-7 text-center flex items-center rounded-lg icon-hover hover:bg-darkgray hover:!text-darkwhite"
             >
-                <a href="/public/files/CV_AgustinMusumeci_2024.pdf" download="CV_AgustinMusumeci_2024.pdf"
-                    >Download CV</a
+                <a
+                    href="/public/files/CV_AgustinMusumeci_2024.pdf"
+                    download="CV_AgustinMusumeci_2024.pdf">Download CV</a
                 >
             </li>
         </Navigation>
