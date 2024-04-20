@@ -11,7 +11,7 @@ const about = await getEntry("about", "data");
         <h1 class="title-xl">
             {about.data.title}
         </h1>
-        <Navigation styles="items-">
+        <Navigation styles="gap-5">
             {
                 about.data.refs.map(
                     (ref: ref) =>

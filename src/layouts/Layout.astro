@@ -1,18 +1,25 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+		<meta name="theme-color" content="#FFC4CD" />
+		<meta property="og:title" content={title} />
+		<meta property="og:image" content="/images/profile.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={title}>
+		<meta property="og:description" content={description}>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link
@@ -43,7 +50,6 @@ const { title } = Astro.props;
 
 	#background {
 		@apply sticky -top-[20%] md:-top-[100%] blur-3xl -z-10 overflow-x-clip;
-		/* @apply sticky md:fixed -top-[20%] md:-top-[50%] blur-3xl -z-10 overflow-x-clip md:overflow-visible; */
 	}
 
 	#background > * {
