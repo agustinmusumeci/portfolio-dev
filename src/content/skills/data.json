@@ -1,0 +1,5 @@
+[
+    {"title":"Frontend","order":1,"content":[{"title":"HTML 5","icon":"devicon-html5-plain"},{"title":"JavaScript","icon":"devicon-javascript-plain"},{"title":"TypeScript","icon":"devicon-typescript-plain"},{"title":"React","icon":"devicon-react-original"},{"title":"Astro 4.0","icon":"devicon-astro-plain"},{"title":"CSS","icon":"devicon-css3-plain"},{"title":"SASS","icon":"devicon-sass-original"},{"title":"TailwindCSS","icon":"devicon-tailwindcss-original"}]},
+    {"title":"Backend","order":2,"content":[{"title":"NodeJS","icon":"devicon-nodejs-plain-wordmark"},{"title":"MySQL", "icon":"devicon-mysql-original"},{"title":"MongoDB","icon":"devicon-mongodb-plain-wordmark"},{"title":"Firebase","icon":"devicon-firebase-plain"},{"title":"ExpressJS", "icon":"devicon-express-original"},{"title":"Python", "icon":"devicon-python-plain"}]},
+    {"title":"Tools","order":4,"content":[{"title":"Git","icon":"devicon-git-plain"},{"title":"Github","icon":"devicon-github-original"},{"title":"Linux", "icon":"devicon-linux-plain"},{"title":"Nginx", "icon":"devicon-nginx-original"}]}
+]

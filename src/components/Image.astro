@@ -1,0 +1,11 @@
+---
+interface Props {
+    url: string;
+    alt: string;
+    style: string;
+}
+
+const {url, alt, style} = Astro.props;
+---
+
+<img src={url} alt={alt} loading="lazy" class={`${style}`}>

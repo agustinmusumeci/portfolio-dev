@@ -1,0 +1,34 @@
+[
+    {
+        "title":"Ordenar Online",
+        "category":"Ecommerce",
+        "img":"/images/ordenaronline.png",
+        "tools":["ReactJS","NodeJS", "ExpressJS", "MySQL", "Tailwind CSS", "JWT", "Nginx"],
+        "summary":"Multicompany & addaptable E-commerce with product display and dashboard developed dev on 2024-2025.",
+        "href": "https://cortesargentinos.ordenar.online"
+    },
+    {
+        "title":"Valdemarin Studio",
+        "category":"Landing Page",
+        "img":"/images/valdemarin.png",
+        "tools":["HTML5","SASS","JavaScript"],
+        "summary":"Valdemarin Studio landing page developed in cooperation with a graphic designer and a backend developer on 2023.",
+        "href":"https://estudiovaldemarin.com/"
+    },
+    {
+        "title":"Grupo Keluar",
+        "category":"Landing Page",
+        "img":"/images/keluar.jpg",
+        "tools":["Astro", "Tailwind CSS","JavaScript"],
+        "summary":"Grupo Keluar landing page developed in cooperation with a graphic designer/backend dev on 2023-2024.",
+        "href": "https://github.com/agustinmusumeci/grupo-keluar-landingpage"
+    },
+    {
+        "title":"Cutest Animations",
+        "category":"npm library",
+        "img": "/images/npmlib.png",
+        "tools":["JavaScript","CSS","Git","NPM"],
+        "summary":"Public on scroll animation library developed and publish on npm with +400 downloads.",
+        "href": "https://www.npmjs.com/package/cutest-animations"
+    }
+]

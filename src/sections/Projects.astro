@@ -1,0 +1,36 @@
+---
+import { getEntry } from "astro:content";
+import Card from  "../components/Card.astro";
+import Image from "../components/Image.astro";
+import Chips from "../components/Chips.astro";
+
+const projects = await getEntry("projects","data");
+type project = {
+    href: string
+    title: string
+    img : string
+    category: string
+    tools: Array<string>
+    summary: string
+}
+---
+<section class="container space-down-xl" id="projects">
+    <h2 class="title-lg text-center sm:text-left sm:pb-2 pb-6 line-clamp-1" data-animate="fade-bottom">My projects .</h2>
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.data.map((el:project, index:number) => (
+            <a href={el.href} target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay=`${100+(index*50)}`>
+                <Card>
+                    <Image url={el.img} alt={`${el.title} Showcase Image.`} style="rounded-lg w-[75%] h-44 object-cover" slot="image" />
+                    <h4 class="mt-4 title-sm" slot="title">
+                        {el.title} {el.category}
+                    </h4>
+                    <Chips chips={el.tools} slot="content"/>
+                    
+                    <p class="mt-4 " slot="content">
+                        {el.summary}
+                    </p>
+                </Card>
+            </a>
+        ))}
+    </section>
+</section>
