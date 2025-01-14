@@ -1,7 +1,672 @@
-<!DOCTYPE html><html lang="es" lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="./icons/favicon.svg"><meta name="theme-color" content="#FFC4CD"><meta property="og:title" content="Agustin Musumeci | Portfolio"><meta property="og:image" content="./images/profile.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Agustin Musumeci | Portfolio"><meta property="og:description" content="Welcome to my web, i am a freelance frontend dev who offers web desing &#38; development services. Explore my portfolio to discover a sleek of webs that will deligth you. Looking for web services? Contact me."><meta name="generator" content="Astro v4.2.5"><title>Agustin Musumeci | Portfolio</title><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"><link rel="stylesheet" href="index.css" /><script type="module">const c=()=>{const t=document.getElementById("nav"),e=document.getElementById("hamburger");e.dataset.active=="false"?e.dataset.active="true":e.dataset.active="false",t.classList.toggle("-translate-y-full")},r=document.getElementById("hamburger");r.addEventListener("click",c);const m=t=>{t.forEach(e=>{e.isIntersecting&&e.intersectionRatio===1&&Array.from(l).forEach(n=>{n.classList.add("")})})},l=document.getElementsByClassName("xp-circles"),d=document.getElementById("experience"),i={root:null,rootMargin:"0px",threshold:1};let g=new IntersectionObserver(m,i);g.observe(d);const u=document.getElementById("contact-form");u.addEventListener("submit",t=>y(t));const y=async t=>{t.preventDefault();const e=document.getElementById("name").value,n=document.getElementById("email").value,s=document.getElementById("message").value,a=document.getElementById("modal");a.classList.remove("opacity-0");const o=await v("https://yotoro.net/mailer/send",{name:e,email:n,message:s});a.innerHTML=o.data.message,a.setAttribute("data-active",!0)},v=async(t,e)=>{try{return await(await fetch(t,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(e),credentials:"omit"})).json()}catch(n){console.error(n)}};
-</script></head> <body> <div id="top"></div>  <main class="bg-darkwhite/50 md:bg-darkwhite/55 relative"> <div id="background"> <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg"> <path color="currentColor" fill="#ccafcd90" d="M10.2,-9.9C13.1,-0.8,15.4,4.7,13.6,14C11.8,23.3,5.9,36.4,-5.8,39.8C-17.5,43.1,-35,36.7,-44.8,22.8C-54.7,8.8,-56.8,-12.6,-48.1,-25.1C-39.3,-37.6,-19.7,-41.2,-8,-36.5C3.6,-31.9,7.2,-19.1,10.2,-9.9Z" transform="translate(100 100)"></path> </svg> <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg"> <path color="currentColor" fill="#ffc4bf90" d="M16.4,-6.8C32.5,-6,64.6,-11.5,73.9,-6.1C83.2,-0.6,69.6,15.9,55.7,24.8C41.8,33.7,27.5,35.1,15.2,37.9C2.8,40.8,-7.6,45.2,-18.5,44.1C-29.4,43.1,-40.8,36.6,-46.7,26.8C-52.6,16.9,-53,3.8,-46.7,-4.2C-40.5,-12.1,-27.5,-14.7,-18.6,-16.9C-9.7,-19,-4.9,-20.6,-2.4,-17.8C0.1,-15,0.2,-7.7,16.4,-6.8Z" transform="translate(100 100)"></path> </svg> <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg"> <path color="currentColor" fill="#ffc4ad90" d="M32.5,-36.2C41.8,-30.9,48.9,-20.4,56.1,-6C63.3,8.4,70.6,26.7,64.3,36.5C57.9,46.3,37.8,47.6,19.4,55.1C1,62.5,-15.9,76.2,-25.5,71.9C-35.2,67.6,-37.8,45.4,-46.8,27.9C-55.9,10.4,-71.6,-2.5,-72.6,-15.6C-73.7,-28.8,-60.2,-42.2,-45.6,-46.6C-31.1,-51,-15.6,-46.4,-2,-44C11.6,-41.6,23.1,-41.5,32.5,-36.2Z" transform="translate(100 100)"></path> </svg> <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg"> <path color="currentColor" fill="#ffc4cd90" d="M47.2,-57.3C53.4,-41,45.4,-20.5,38.6,-6.8C31.7,6.9,26.2,13.8,20,20.6C13.8,27.5,6.9,34.3,-3.3,37.6C-13.5,40.8,-26.9,40.6,-32.9,33.8C-38.8,26.9,-37.3,13.5,-33.2,4.1C-29.1,-5.3,-22.5,-10.6,-16.5,-26.8C-10.6,-43.1,-5.3,-70.3,7.6,-77.9C20.5,-85.5,41,-73.5,47.2,-57.3Z" transform="translate(100 100)"></path> </svg> </div> <header class="container flex justify-between items-center"> <h1 class="font-logo z-50"> <a href="#top">Agustin Musumeci</a> </h1> <div class="w-full h-[200px] px-[9.5%] py-9 absolute left-0 top-0 flex bg-darkwhite -translate-y-full md:w-fit md:h-fit md:px-0 md:py-0 md:relative md:bg-opacity-0 md:-translate-y-0 animate" aria-hidden="true" id="nav"> <nav> <ul class="flex items-start gap-5 md:items-center flex-col md:flex-row">  <li class=""> <a href="#about-me" class="text-hover">About me</a> </li> <li> <a href="#projects" class="text-hover">Projects</a> </li> <li> <a href="#get-in-touch" class="text-hover">Get in touch</a> </li>  </ul> </nav> </div> <button class="hamburger" id="hamburger" data-active="false"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </button> </header>  <section class="container h-[92.5dvh] grid place-content-center"> <div aria-hidden="true" data-animate="fade-bottom"> <h1 class="title-xl"> Freelance Frontend Dev. </h1> <nav> <ul class="flex gap-5"> <li class="icon-hover"> <a href="https://mail.google.com/" target="_blank" class="text-2xl flex items-center"> <i></i> </a> </li><li class="icon-hover"> <a href="https://github.com/agustinmusumeci" target="_blank" class="text-2xl flex items-center"> <i class="devicon-github-original"></i> </a> </li><li class="icon-hover"> <a href="https://www.linkedin.com/in/agustinmusumeci/" target="_blank" class="text-2xl flex items-center"> <i class="devicon-linkedin-plain"></i> </a> </li><li class="bg-dark text-darkwhite text-xs px-4 h-7 text-center flex items-center rounded-lg icon-hover hover:bg-darkgray hover:!text-darkwhite"> <a href="./files/CV_AgustinMusumeci_2024.pdf" download="CV_AgustinMusumeci_2024.pdf">Download CV</a> </li>  </ul> </nav> </div> </section> <section class="container space-down-xl" id="about-me"> <article> <h2 class="title-lg" data-animate="fade-bottom">About me .</h2> <article class="flex flex-col items-left md:flex-row md:items-center gap-5" data-animate="fade-bottom"> <img src="./images/profile.png" alt="Agustin Musumeci Picture" loading="lazy" class="w-[30%] md:w-[20%] rounded-full shadow-2xl round-outside bg-pink"> <p class="">
-Hi! I am Agustin Musumeci + 1 years experience developer within the sector as a freelance and a second year system information engineering student whose goals are successfulness, know how to adapt and keep learning. Currently I am available for job and new experiences. </p> </article> </article> <article class="space-y-xl"> <h3 class="title-md" data-animate="fade-bottom">Experience</h3> <article class="w-full flex flex-col gap-2 md:w-[50%]" id="experience"> <div aria-hidden="true" class="relative w-fit flex flex-row gap-5 items-left" data-animate="fade-bottom" data-animate-delay="100"> <div class="flex flex-col items-center w-fit gap-2"> <div class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80  rounded-full animate"></div> <div class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full" aria-hidden="true"></div> </div> <div> <p class="text-gray">December 2022</p> <p class="text-darkgray"> I jumped into university (Universidad Tecnológica Nacional) and started learning Fullstack Development. </p> </div> </div><div aria-hidden="true" class="relative w-fit flex flex-row gap-5 items-left" data-animate="fade-bottom" data-animate-delay="200"> <div class="flex flex-col items-center w-fit gap-2"> <div class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80  rounded-full animate"></div> <div class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full" aria-hidden="true"></div> </div> <div> <p class="text-gray">August 2023</p> <p class="text-darkgray"> Started working as a Freelance developing landing pages, along with a graphic designer in a few projects learning how to team-work and cooperate. </p> </div> </div><div aria-hidden="true" class="relative w-fit flex flex-row gap-5 items-left" data-animate="fade-bottom" data-animate-delay="300"> <div class="flex flex-col items-center w-fit gap-2"> <div class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80  rounded-full animate"></div> <div class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full" aria-hidden="true"></div> </div> <div> <p class="text-gray">Junary 2024</p> <p class="text-darkgray"> Started my own projects and get deep into more back&amp;front tecnologies. </p> </div> </div><div aria-hidden="true" class="relative w-fit flex flex-row gap-5 items-left" data-animate="fade-bottom" data-animate-delay="400"> <div class="flex flex-col items-center w-fit gap-2"> <div class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80  rounded-full animate"></div>  </div> <div> <p class="text-gray">Currently 2024</p> <p class="text-darkgray"> I am working as a Freelance and started looking for oportunities outside, developing software for interested customers and companies. </p> </div> </div> </article> </article> <article class="space-down-xl"> <h3 class="title-md" data-animate="fade-bottom">Skills</h3> <section class="grid grid-cols-1 gap-6 md:grid-cols-2"> <article class="card">  <h4 class="title-sm"> Frontend </h4> <ul class="grid grid-cols-3 justify-start gap-6 space-up-md"> <li class="flex flex-col text-left font-medium"> <i class="devicon-html5-plain text-3xl md:text-4xl"></i> HTML 5 </li><li class="flex flex-col text-left font-medium"> <i class="devicon-javascript-plain text-3xl md:text-4xl"></i> JavaScript </li><li class="flex flex-col text-left font-medium"> <i class="devicon-react-original text-3xl md:text-4xl"></i> React </li><li class="flex flex-col text-left font-medium"> <i class="devicon-astro-plain text-3xl md:text-4xl"></i> Astro 4.0 </li><li class="flex flex-col text-left font-medium"> <i class="devicon-css3-plain text-3xl md:text-4xl"></i> CSS </li><li class="flex flex-col text-left font-medium"> <i class="devicon-sass-original text-3xl md:text-4xl"></i> SASS </li><li class="flex flex-col text-left font-medium"> <i class="devicon-tailwindcss-original text-3xl md:text-4xl"></i> TailwindCSS </li> </ul> </article><article class="card">  <h4 class="title-sm"> Backend </h4> <ul class="grid grid-cols-3 justify-start gap-6 space-up-md"> <li class="flex flex-col text-left font-medium"> <i class="devicon-nodejs-plain-wordmark text-3xl md:text-4xl"></i> NodeJS </li><li class="flex flex-col text-left font-medium"> <i class="devicon-mongodb-plain-wordmark text-3xl md:text-4xl"></i> MongoDB </li><li class="flex flex-col text-left font-medium"> <i class="devicon-firebase-plain text-3xl md:text-4xl"></i> Firebase </li><li class="flex flex-col text-left font-medium"> <i class="devicon-express-original text-3xl md:text-4xl"></i> ExpressJS </li> </ul> </article><article class="card">  <h4 class="title-sm"> Learning </h4> <ul class="grid grid-cols-3 justify-start gap-6 space-up-md"> <li class="flex flex-col text-left font-medium"> <i class="devicon-typescript-plain text-3xl md:text-4xl"></i> TypeScript </li> </ul> </article><article class="card">  <h4 class="title-sm"> Tools </h4> <ul class="grid grid-cols-3 justify-start gap-6 space-up-md"> <li class="flex flex-col text-left font-medium"> <i class="devicon-git-plain text-3xl md:text-4xl"></i> Git </li><li class="flex flex-col text-left font-medium"> <i class="devicon-github-original text-3xl md:text-4xl"></i> Github </li> </ul> </article> </section> </article> </section>  <section class="container space-down-xl" id="projects"> <h2 class="title-lg" data-animate="fade-bottom">My projects .</h2> <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> <a href="https://estudiovaldemarin.com/" target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay="100"> <article class="card"> <img src="./images/valdemarin.PNG" alt="Valdemarin Studio Showcase Image." loading="lazy" class="rounded-lg w-[75%] h-44 object-cover"> <h4 class="mt-4 title-sm"> Valdemarin Studio Landing Page </h4> <ul class="chips"> <li class="chip"> HTML5 </li><li class="chip"> SASS </li><li class="chip"> JavaScript </li> </ul><p class="mt-4 "> Valdemarin Studio landing page developed in cooperation with a graphic designer and a backend developer on 2023. </p> </article> </a><a href="https://github.com/agustinmusumeci/grupo-keluar-landingpage" target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay="150"> <article class="card"> <img src="./images/keluar.PNG" alt="Grupo Keluar Showcase Image." loading="lazy" class="rounded-lg w-[75%] h-44 object-cover"> <h4 class="mt-4 title-sm"> Grupo Keluar Landing Page </h4> <ul class="chips"> <li class="chip"> Astro </li><li class="chip"> Tailwind CSS </li><li class="chip"> JavaScript </li> </ul><p class="mt-4 "> Grupo Keluar landing page developed in cooperation with a graphic designer/backend dev on 2023. </p> </article> </a><a href="https://github.com/agustinmusumeci/aside-from-style-ecommerce" target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay="200"> <article class="card"> <img src="./images/asidefromstyle.PNG" alt="Aside From Style Showcase Image." loading="lazy" class="rounded-lg w-[75%] h-44 object-cover"> <h4 class="mt-4 title-sm"> Aside From Style Ecommerce </h4> <ul class="chips"> <li class="chip"> HTML </li><li class="chip"> Tailwind CSS </li><li class="chip"> React </li><li class="chip"> JavaScript </li><li class="chip"> MongoDB </li><li class="chip"> NodeJS </li> </ul><p class="mt-4 "> Clothing Ecommerce with product display and admin management developed on my own as a portfolio project. </p> </article> </a><a href="https://www.npmjs.com/package/cutest-animations" target="_blank" aria-hidden="true" data-animate="fade-bottom" class="" data-animate-delay="250"> <article class="card"> <img src="./images/npmlib.PNG" alt="Cutest Animations Showcase Image." loading="lazy" class="rounded-lg w-[75%] h-44 object-cover"> <h4 class="mt-4 title-sm"> Cutest Animations npm library </h4> <ul class="chips"> <li class="chip"> JavaScript </li><li class="chip"> CSS </li><li class="chip"> Git </li><li class="chip"> NPM </li> </ul><p class="mt-4 "> Public on scroll animation library developed and publish on npm with +400 downloads. </p> </article> </a> </section> </section> <div aria-hidden="true" class="modal opacity-0 relative" id="modal" data-active="false"> <!-- Message rendering here -->
-Sending message...
-</div> <section class="container space-down-xl" id="get-in-touch"> <h2 class="title-lg" data-animate="fade-bottom">Get in touch .</h2> <section class="grid grid-cols-1 md:grid-cols-2 gap-8"> <aside data-animate="fade-bottom"> <p class="title-sm space-down-md">
-Looking for a web developer? Get in touch to learn more.
-</p> <ul class="flex flex-wrap gap-4 xs:gap-6"> <li class="button"><a href="mailto:agu.musumeci@gmail.com?subject=Hi&#38;body=I want to talk, let's meet." rel="">agu.musumeci@gmail.com</a></li><li class="button"><a rel="">+54 351 2162 461</a></li> </ul> </aside> <form action="" class="w-[85%] md:w-[50%] flex flex-col gap-6 col-span-2" id="contact-form" data-astro-reload> <label for="name" data-animate="fade-bottom" data-animate-delay="150"> <p class="font-display uppercase font-bold">Name</p> <input type="text" name="name" id="name" class="w-full rounded-lg px-3 py-1" required="true"> </label> <label for="email" data-animate="fade-bottom" data-animate-delay="300"> <p class="font-display uppercase font-bold">Email</p> <input type="email" name="email" id="email" class="w-full rounded-lg px-3 py-1" required="true"> </label> <label for="message" data-animate="fade-bottom" data-animate-delay="450"> <p class="font-display uppercase font-bold">Message</p> <textarea name="message" id="message" class="h-28 px-3 py-1 resize-none w-full rounded-lg" required="true"></textarea> </label> <button type="submit" class="button hover:scale font-display uppercase font-bold w-40" data-animate="fade-bottom" data-animate-delay="550">Send</button> </form> </section> </section>  <footer class="bg-beige text-ellipsis overflow-hidden" data-animate="fade-bottom"> <div class="container flex flex-wrap flex-col gap-6 sm:gap-0 sm:flex-row justify-between"> <h1 class="space-down-md font-logo"><a href="#top">Agustin Musumeci</a></h1> <div class="flex flex-row flex-1 justify-start sm:justify-end gap-20"> <aside> <p class="font-logo">Navigation</p> <nav> <ul class="flex flex-col !gap-1">  <li class=""> <a href="#about-me" class="text-hover">About me</a> </li> <li> <a href="#projects" class="text-hover">Projects</a> </li> <li> <a href="#get-in-touch" class="text-hover">Get in touch</a> </li>  </ul> </nav> </aside> <aside> <p class="font-logo">Media</p> <nav> <ul class="flex flex-col !gap-1"> <li class="text-hover"><a href="https://github.com/agustinmusumeci" target="_blank">Github</a></li><li class="text-hover"><a href="https://www.linkedin.com/in/agustinmusumeci/" target="_blank">Linkedin</a></li><li class="text-hover"><a href="mailto:agu.musumeci@gmail.com?subject=Hi&#38;body=I want to talk, let's meet." target="_blank">agu.musumeci@gmail.com</a></li> </ul> </nav> </aside> </div> </div> </footer> </main>  <script src="../node_modules/cutest-animations/src/index.js"></script> </body> </html> 
+<!DOCTYPE html>
+<html lang="es" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
+    <meta name="theme-color" content="#FFC4CD" />
+    <meta property="og:title" content="Agustin Musumeci | Portfolio" />
+    <meta property="og:image" content="./images/profile.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Agustin Musumeci | Portfolio" />
+    <meta
+      property="og:description"
+      content="Welcome to my web, i am a freelance frontend dev who offers web desing &#38; development services. Explore my portfolio to discover a sleek of webs that will deligth you. Looking for web services? Contact me."
+    />
+    <meta name="generator" content="Astro v4.2.5" />
+    <title>Agustin Musumeci | Portfolio</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="./index.0-TShYxR.css" />
+    <script type="module">
+      const c = () => {
+          const t = document.getElementById("nav"),
+            e = document.getElementById("hamburger");
+          e.dataset.active == "false"
+            ? (e.dataset.active = "true")
+            : (e.dataset.active = "false"),
+            t.classList.toggle("-translate-y-full");
+        },
+        r = document.getElementById("hamburger");
+      r.addEventListener("click", c);
+      const m = (t) => {
+          t.forEach((e) => {
+            e.isIntersecting &&
+              e.intersectionRatio === 1 &&
+              Array.from(l).forEach((n) => {
+                n.classList.add("");
+              });
+          });
+        },
+        l = document.getElementsByClassName("xp-circles"),
+        d = document.getElementById("experience"),
+        i = { root: null, rootMargin: "0px", threshold: 1 };
+      let g = new IntersectionObserver(m, i);
+      g.observe(d);
+      const u = document.getElementById("contact-form");
+      u.addEventListener("submit", (t) => y(t));
+      const y = async (t) => {
+          t.preventDefault();
+          const e = document.getElementById("name").value,
+            n = document.getElementById("email").value,
+            s = document.getElementById("message").value,
+            a = document.getElementById("modal");
+          a.classList.remove("opacity-0");
+          const o = await v("https://yotoro.net/mailer/send", {
+            name: e,
+            email: n,
+            message: s,
+          });
+          (a.innerHTML = o.data.message), a.setAttribute("data-active", !0);
+        },
+        v = async (t, e) => {
+          try {
+            return await (
+              await fetch(t, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(e),
+                credentials: "omit",
+              })
+            ).json();
+          } catch (n) {
+            console.error(n);
+          }
+        };
+    </script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <main class="bg-darkwhite/50 md:bg-darkwhite/55 relative">
+      <div id="background">
+        <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            color="currentColor"
+            fill="#ccafcd90"
+            d="M10.2,-9.9C13.1,-0.8,15.4,4.7,13.6,14C11.8,23.3,5.9,36.4,-5.8,39.8C-17.5,43.1,-35,36.7,-44.8,22.8C-54.7,8.8,-56.8,-12.6,-48.1,-25.1C-39.3,-37.6,-19.7,-41.2,-8,-36.5C3.6,-31.9,7.2,-19.1,10.2,-9.9Z"
+            transform="translate(100 100)"
+          ></path>
+        </svg>
+        <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            color="currentColor"
+            fill="#ffc4bf90"
+            d="M16.4,-6.8C32.5,-6,64.6,-11.5,73.9,-6.1C83.2,-0.6,69.6,15.9,55.7,24.8C41.8,33.7,27.5,35.1,15.2,37.9C2.8,40.8,-7.6,45.2,-18.5,44.1C-29.4,43.1,-40.8,36.6,-46.7,26.8C-52.6,16.9,-53,3.8,-46.7,-4.2C-40.5,-12.1,-27.5,-14.7,-18.6,-16.9C-9.7,-19,-4.9,-20.6,-2.4,-17.8C0.1,-15,0.2,-7.7,16.4,-6.8Z"
+            transform="translate(100 100)"
+          ></path>
+        </svg>
+        <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            color="currentColor"
+            fill="#ffc4ad90"
+            d="M32.5,-36.2C41.8,-30.9,48.9,-20.4,56.1,-6C63.3,8.4,70.6,26.7,64.3,36.5C57.9,46.3,37.8,47.6,19.4,55.1C1,62.5,-15.9,76.2,-25.5,71.9C-35.2,67.6,-37.8,45.4,-46.8,27.9C-55.9,10.4,-71.6,-2.5,-72.6,-15.6C-73.7,-28.8,-60.2,-42.2,-45.6,-46.6C-31.1,-51,-15.6,-46.4,-2,-44C11.6,-41.6,23.1,-41.5,32.5,-36.2Z"
+            transform="translate(100 100)"
+          ></path>
+        </svg>
+        <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            color="currentColor"
+            fill="#ffc4cd90"
+            d="M47.2,-57.3C53.4,-41,45.4,-20.5,38.6,-6.8C31.7,6.9,26.2,13.8,20,20.6C13.8,27.5,6.9,34.3,-3.3,37.6C-13.5,40.8,-26.9,40.6,-32.9,33.8C-38.8,26.9,-37.3,13.5,-33.2,4.1C-29.1,-5.3,-22.5,-10.6,-16.5,-26.8C-10.6,-43.1,-5.3,-70.3,7.6,-77.9C20.5,-85.5,41,-73.5,47.2,-57.3Z"
+            transform="translate(100 100)"
+          ></path>
+        </svg>
+      </div>
+      <header class="container flex justify-between items-center">
+        <h1 class="font-logo z-50"><a href="#top">Agustin Musumeci</a></h1>
+        <div
+          class="w-full h-[200px] px-[9.5%] py-9 absolute left-0 top-0 flex bg-darkwhite -translate-y-full md:w-fit md:h-fit md:px-0 md:py-0 md:relative md:bg-opacity-0 md:-translate-y-0 animate"
+          aria-hidden="true"
+          id="nav"
+        >
+          <nav>
+            <ul
+              class="flex items-start gap-5 md:items-center flex-col md:flex-row"
+            >
+              <li class="">
+                <a href="#about-me" class="text-hover">About me</a>
+              </li>
+              <li><a href="#projects" class="text-hover">Projects</a></li>
+              <li>
+                <a href="#get-in-touch" class="text-hover">Get in touch</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button class="hamburger" id="hamburger" data-active="false">
+          <span aria-hidden="true"></span> <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </header>
+      <section class="container h-[92.5dvh] grid place-content-center">
+        <div aria-hidden="true" data-animate="fade-bottom">
+          <h1 class="title-xl sm:text-left text-center">Fullstack developer</h1>
+          <nav>
+            <ul class="flex gap-5 justify-center sm:justify-start">
+              <li class="icon-hover">
+                <a
+                  href="https://mail.google.com/"
+                  target="_blank"
+                  class="text-2xl flex items-center"
+                >
+                  <i></i>
+                </a>
+              </li>
+              <li class="icon-hover">
+                <a
+                  href="https://github.com/agustinmusumeci"
+                  target="_blank"
+                  class="text-2xl flex items-center"
+                >
+                  <i class="devicon-github-original"></i>
+                </a>
+              </li>
+              <li class="icon-hover">
+                <a
+                  href="https://www.linkedin.com/in/agustinmusumeci/"
+                  target="_blank"
+                  class="text-2xl flex items-center"
+                >
+                  <i class="devicon-linkedin-plain"></i>
+                </a>
+              </li>
+              <li
+                class="bg-dark text-darkwhite text-xs px-4 h-7 text-center flex items-center rounded-lg icon-hover hover:bg-darkgray hover:!text-darkwhite"
+              >
+                <a
+                  href="./files/CV_AgustinMusumeci_2025.pdf"
+                  download="CV_AgustinMusumeci_2025.pdf"
+                  >Download CV</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="container space-down-xl" id="about-me">
+        <article>
+          <h2
+            class="title-lg text-center sm:text-left"
+            data-animate="fade-bottom"
+          >
+            About me .
+          </h2>
+          <article
+            class="flex flex-col items-left sm:flex-row sm:items-center gap-5"
+            data-animate="fade-bottom"
+          >
+            <img
+              src="./images/profile.png"
+              alt="Agustin Musumeci Picture"
+              loading="lazy"
+              class="w-[35%] sm:w-[20%] rounded-full sm:my-2 my-6 mx-auto shadow-2xl round-outside bg-pink"
+            />
+            <p class="">
+              Hi! I am Agustin Musumeci + 1 years experience developer within
+              the sector as a freelance and a second year system information
+              engineering student whose goals are successfulness, know how to
+              adapt and keep learning. Currently I am available for job and new
+              experiences.
+            </p>
+          </article>
+        </article>
+        <article class="space-y-xl">
+          <h3
+            class="title-md text-center sm:text-left sm:pb-2 pb-4"
+            data-animate="fade-bottom"
+          >
+            Experience
+          </h3>
+          <article
+            class="w-full flex flex-col gap-2 md:w-[50%]"
+            id="experience"
+          >
+            <div
+              aria-hidden="true"
+              class="relative w-fit flex flex-row gap-5 items-left"
+              data-animate="fade-bottom"
+              data-animate-delay="100"
+            >
+              <div class="flex flex-col items-center w-fit gap-2">
+                <div
+                  class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80 rounded-full animate"
+                ></div>
+                <div
+                  class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <div>
+                <p class="text-gray">December 2022</p>
+                <p class="text-darkgray">
+                  I jumped into university (Universidad Tecnológica Nacional)
+                  and started learning Fullstack Development.
+                </p>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="relative w-fit flex flex-row gap-5 items-left"
+              data-animate="fade-bottom"
+              data-animate-delay="200"
+            >
+              <div class="flex flex-col items-center w-fit gap-2">
+                <div
+                  class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80 rounded-full animate"
+                ></div>
+                <div
+                  class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <div>
+                <p class="text-gray">August 2023</p>
+                <p class="text-darkgray">
+                  Started working as a Freelance developing landing pages, along
+                  with a graphic designer in a few projects learning how to
+                  team-work and cooperate.
+                </p>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="relative w-fit flex flex-row gap-5 items-left"
+              data-animate="fade-bottom"
+              data-animate-delay="300"
+            >
+              <div class="flex flex-col items-center w-fit gap-2">
+                <div
+                  class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80 rounded-full animate"
+                ></div>
+                <div
+                  class="w-[2px] h-[12dvh] md:h-[12dvh] lg:h-[10dvh] flex bg-dark/80 rounded-full"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <div>
+                <p class="text-gray">Junary 2024</p>
+                <p class="text-darkgray">
+                  Started my own projects and get deep into more back&amp;front
+                  tecnologies.
+                </p>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="relative w-fit flex flex-row gap-5 items-left"
+              data-animate="fade-bottom"
+              data-animate-delay="400"
+            >
+              <div class="flex flex-col items-center w-fit gap-2">
+                <div
+                  class="xp-circles w-5 ml-1 aspect-square border-4 border-dark/80 rounded-full animate"
+                ></div>
+              </div>
+              <div>
+                <p class="text-gray">Currently 2025</p>
+                <p class="text-darkgray">
+                  I am working as a Freelance and started looking for
+                  oportunities outside, developing software for interested
+                  customers and companies.
+                </p>
+              </div>
+            </div>
+          </article>
+        </article>
+        <article class="space-down-xl">
+          <h3
+            class="title-md text-center sm:text-left sm:pb-2 pb-4"
+            data-animate="fade-bottom"
+          >
+            Skills
+          </h3>
+          <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <article class="card">
+              <h4 class="title-sm">Frontend</h4>
+              <ul class="grid grid-cols-3 justify-start gap-6 space-up-md">
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-html5-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-javascript-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-typescript-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-react-original text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-astro-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-css3-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-sass-original text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i
+                    class="devicon-tailwindcss-original text-3xl md:text-4xl"
+                  ></i>
+                </li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4 class="title-sm">Backend</h4>
+              <ul class="grid grid-cols-3 justify-start gap-6 space-up-md">
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i
+                    class="devicon-nodejs-plain-wordmark text-3xl md:text-4xl"
+                  ></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-mysql-original text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i
+                    class="devicon-mongodb-plain-wordmark text-3xl md:text-4xl"
+                  ></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-firebase-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-express-original text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-python-plain text-3xl md:text-4xl"></i>
+                </li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4 class="title-sm">Tools</h4>
+              <ul class="grid grid-cols-3 justify-start gap-6 space-up-md">
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-git-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-github-original text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-linux-plain text-3xl md:text-4xl"></i>
+                </li>
+                <li class="flex flex-col items-left font-medium w-fit">
+                  <i class="devicon-nginx-original text-3xl md:text-4xl"></i>
+                </li>
+              </ul>
+            </article>
+          </section>
+        </article>
+      </section>
+      <section class="container space-down-xl" id="projects">
+        <h2
+          class="title-lg text-center sm:text-left sm:pb-2 pb-6 line-clamp-1"
+          data-animate="fade-bottom"
+        >
+          My projects .
+        </h2>
+        <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <a
+            href="https://cortesargentinos.ordenar.online"
+            target="_blank"
+            aria-hidden="true"
+            data-animate="fade-bottom"
+            class=""
+            data-animate-delay="100"
+          >
+            <article class="card">
+              <img
+                src="./images/ordenaronline.png"
+                alt="Ordenar Online Showcase Image."
+                loading="lazy"
+                class="rounded-lg w-[75%] h-44 object-cover"
+              />
+              <h4 class="mt-4 title-sm">Ordenar Online Ecommerce</h4>
+              <ul class="chips">
+                <li class="chip">ReactJS</li>
+                <li class="chip">NodeJS</li>
+                <li class="chip">ExpressJS</li>
+                <li class="chip">MySQL</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">JWT</li>
+                <li class="chip">Nginx</li>
+              </ul>
+              <p class="mt-4">
+                Multicompany &amp; addaptable E-commerce with product display
+                and dashboard developed dev on 2024-2025.
+              </p>
+            </article> </a
+          ><a
+            href="https://estudiovaldemarin.com/"
+            target="_blank"
+            aria-hidden="true"
+            data-animate="fade-bottom"
+            class=""
+            data-animate-delay="150"
+          >
+            <article class="card">
+              <img
+                src="./images/valdemarin.png"
+                alt="Valdemarin Studio Showcase Image."
+                loading="lazy"
+                class="rounded-lg w-[75%] h-44 object-cover"
+              />
+              <h4 class="mt-4 title-sm">Valdemarin Studio Landing Page</h4>
+              <ul class="chips">
+                <li class="chip">HTML5</li>
+                <li class="chip">SASS</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+              <p class="mt-4">
+                Valdemarin Studio landing page developed in cooperation with a
+                graphic designer and a backend developer on 2023.
+              </p>
+            </article> </a
+          ><a
+            href="https://github.com/agustinmusumeci/grupo-keluar-landingpage"
+            target="_blank"
+            aria-hidden="true"
+            data-animate="fade-bottom"
+            class=""
+            data-animate-delay="200"
+          >
+            <article class="card">
+              <img
+                src="./images/keluar.jpg"
+                alt="Grupo Keluar Showcase Image."
+                loading="lazy"
+                class="rounded-lg w-[75%] h-44 object-cover"
+              />
+              <h4 class="mt-4 title-sm">Grupo Keluar Landing Page</h4>
+              <ul class="chips">
+                <li class="chip">Astro</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+              <p class="mt-4">
+                Grupo Keluar landing page developed in cooperation with a
+                graphic designer/backend dev on 2023-2024.
+              </p>
+            </article> </a
+          ><a
+            href="https://www.npmjs.com/package/cutest-animations"
+            target="_blank"
+            aria-hidden="true"
+            data-animate="fade-bottom"
+            class=""
+            data-animate-delay="250"
+          >
+            <article class="card">
+              <img
+                src="./images/npmlib.png"
+                alt="Cutest Animations Showcase Image."
+                loading="lazy"
+                class="rounded-lg w-[75%] h-44 object-cover"
+              />
+              <h4 class="mt-4 title-sm">Cutest Animations npm library</h4>
+              <ul class="chips">
+                <li class="chip">JavaScript</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Git</li>
+                <li class="chip">NPM</li>
+              </ul>
+              <p class="mt-4">
+                Public on scroll animation library developed and publish on npm
+                with +400 downloads.
+              </p>
+            </article>
+          </a>
+        </section>
+      </section>
+      <div
+        aria-hidden="true"
+        class="modal opacity-0 relative"
+        id="modal"
+        data-active="false"
+      >
+        <!-- Message rendering here -->
+        Sending message...
+      </div>
+      <section class="container space-down-xl" id="get-in-touch">
+        <h2
+          class="title-lg text-center sm:text-left sm:pb-2 pb-6 line-clamp-1"
+          data-animate="fade-bottom"
+        >
+          Get in touch .
+        </h2>
+        <section class="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+          <aside data-animate="fade-bottom">
+            <p class="title-sm space-down-md text-center sm:text-left">
+              Looking for a web developer? Get in touch to learn more.
+            </p>
+            <ul
+              class="flex flex-wrap gap-4 xs:gap-6 sm:justify-start justify-center"
+            >
+              <li class="button">
+                <a href="mailto:agu.musumeci@gmail.com?subject=Hi!" rel="">
+                  agu.musumeci@gmail.com
+                </a>
+              </li>
+              <li class="button"><a rel=""> +54 351 2162 461 </a></li>
+            </ul>
+          </aside>
+          <form
+            action=""
+            class="w-[85%] md:w-[50%] flex flex-col gap-6 col-span-2 mx-auto sm:mx-0"
+            id="contact-form"
+            data-astro-reload
+          >
+            <label
+              for="name"
+              data-animate="fade-bottom"
+              data-animate-delay="150"
+            >
+              <p class="font-display uppercase font-bold">Name</p>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="w-full rounded-lg px-3 py-1"
+                required="true"
+              />
+            </label>
+            <label
+              for="email"
+              data-animate="fade-bottom"
+              data-animate-delay="300"
+            >
+              <p class="font-display uppercase font-bold">Email</p>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="w-full rounded-lg px-3 py-1"
+                required="true"
+              />
+            </label>
+            <label
+              for="message"
+              data-animate="fade-bottom"
+              data-animate-delay="450"
+            >
+              <p class="font-display uppercase font-bold">Message</p>
+              <textarea
+                name="message"
+                id="message"
+                class="h-28 px-3 py-1 resize-none w-full rounded-lg"
+                required="true"
+              ></textarea>
+            </label>
+            <button
+              type="submit"
+              class="button hover:scale font-display uppercase font-bold w-40 self-center sm:self-start"
+              data-animate="fade-bottom"
+              data-animate-delay="550"
+            >
+              Send
+            </button>
+          </form>
+        </section>
+      </section>
+      <footer
+        class="bg-beige text-ellipsis overflow-hidden"
+        data-animate="fade-bottom"
+      >
+        <div
+          class="container flex flex-wrap flex-col gap-6 sm:gap-0 sm:flex-row justify-between"
+        >
+          <h1 class="space-down-md font-logo">
+            <a href="#top">Agustin Musumeci</a>
+          </h1>
+          <div class="flex flex-row flex-1 justify-start sm:justify-end gap-20">
+            <aside>
+              <p class="font-logo">Navigation</p>
+              <nav>
+                <ul class="flex flex-col !gap-1">
+                  <li class="">
+                    <a href="#about-me" class="text-hover">About me</a>
+                  </li>
+                  <li><a href="#projects" class="text-hover">Projects</a></li>
+                  <li>
+                    <a href="#get-in-touch" class="text-hover">Get in touch</a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+            <aside>
+              <p class="font-logo">Media</p>
+              <nav>
+                <ul class="flex flex-col !gap-1">
+                  <li class="text-hover">
+                    <a href="https://github.com/agustinmusumeci" target="_blank"
+                      >Github</a
+                    >
+                  </li>
+                  <li class="text-hover">
+                    <a
+                      href="https://www.linkedin.com/in/agustinmusumeci/"
+                      target="_blank"
+                      >Linkedin</a
+                    >
+                  </li>
+                  <li class="text-hover">
+                    <a
+                      href="mailto:agu.musumeci@gmail.com?subject=Hi!"
+                      target="_blank"
+                      >agu.musumeci@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
